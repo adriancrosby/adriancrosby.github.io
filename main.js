@@ -73,7 +73,7 @@ function startTime() {
   if (hours >= 12 && hours < 17) {
     welcome.innerText = 'good afternoon, adrian.'
   }
-  if (hours > 17) {
+  if (hours >= 17) {
     welcome.innerText = 'good evening, adrian.'
   }
 
