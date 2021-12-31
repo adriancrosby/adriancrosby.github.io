@@ -63,6 +63,8 @@ body{
 .app:hover {
   color: rgba(220,220,220, .4);
   text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-underline-position: under;
 }
 
 #search-bar {
@@ -112,12 +114,12 @@ body{
 }
 
 @media screen and (max-width: 968px) {
-<<<<<<< HEAD
 
   body {
     width: 100vw;
     height: 100vh;
     text-align: center;
+    overflow: hidden;
   }
 
   #welcome {
@@ -129,11 +131,6 @@ body{
   #main-container {
     max-width: 100vw;
     height: 100vh;
-=======
-  #main-container {
-    width: 100vw;
-    height: 100%;
->>>>>>> 23e9d549081a65065cc71e096026647300c1fceb
     display: flex;
     flex-direction: column;
     justify-content: center;
