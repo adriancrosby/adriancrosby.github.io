@@ -113,13 +113,34 @@ body{
   font-size: 4em;
 }
 
-@media screen and (max-width: 968px) {
+#weather {
+  display: flex;
+  justify-content: space-around;
+
+  width: 10%;
+  position: relative;
+  top: 10%;
+  left: 4%;
+}
+
+@media screen and (max-width: 960px) {
 
   body {
     width: 100vw;
     height: 100vh;
     text-align: center;
     overflow: hidden;
+  }
+
+  #weather {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-right: 6%;
+  }
+
+  #loc-des {
+    padding-right: 5%;
   }
 
   #welcome {
