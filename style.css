@@ -14,7 +14,8 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 #main-container {
@@ -126,8 +127,8 @@ body{
 @media screen and (max-width: 960px) {
 
   body {
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
     text-align: center;
     overflow: hidden;
   }

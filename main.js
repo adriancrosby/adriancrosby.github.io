@@ -12,6 +12,7 @@ let displayHours = '';
 let displayMinutes = '';
 let displaySeconds = '';
 
+
 const months = {
   1: 'January',
   2: 'February',
@@ -28,12 +29,29 @@ const months = {
 }
 
 
-function weatherBallon(cityID) {
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    document.getElementById('weather').innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+
+function showPosition(position) {
+  lat = position.coords.latitude;
+  lon = position.coords.longitude;
+  weatherBallon(lat, lon)
+}
+
+
+
+function weatherBallon(lat, lon) {
   var key = 'af2b0132ec478c60dfa3990f4334016b'
-  fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
+  fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + key)
   .then(function(resp) {return resp.json()})
   .then(function(data) {
-    drawWeather(data);
+    drawWeather(data)
   })
   .catch(function() {
     console.log('error bro')
@@ -50,7 +68,7 @@ function drawWeather(d) {
 }
 
 window.onload = function() {
-  weatherBallon(5381325)
+  getLocation();
 }
 
 
