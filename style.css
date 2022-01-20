@@ -1,79 +1,192 @@
-*{
-  box-sizing: border-box;
-  color: #fff;
-  padding: 0;
+* {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', Arial;
+  color: #fff;
 }
 
-body{
-  background-image: url('bg.jpg');
-  background-color: rgba(0, 0, 0, .35);
-  background-blend-mode: multiply;
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  max-height: 100vh;
-  overflow: hidden;
+  background-color: rgba(0,0,0,.4); /* Tint color */
+  background-blend-mode: multiply;
+}
+
+#welcome {
+  text-align: center;
+  padding-bottom: 15%;
+}
+
+.header {
+  min-height: 20vh;
+  width: 100%;
+}
+#weather-wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%
 }
 
 #main-container {
-  max-width: 100%;
-  height: 100%;
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-}
-
-#time-container {
-  width: 50%;
-  margin-left: 5%;
-}
-
-#app-side {
-  width: 50%;
-  height: 100%;
+  justify-content: space-around;
 }
 
 #app-container {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  grid-template-columns: 28% 28%;
-  grid-template-rows: 20% 20%;
-}
-
-
-#app-container a {
-  max-width: 100%;
-  max-height: 100%;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .app {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: rgba(255, 255, 255, .8);
+  font-size: 2.5em;
+  color: #fff;
 }
-
-.app:hover {
-  color: rgba(220,220,220, .4);
-  text-decoration: underline;
-  text-decoration-thickness: .1em;
-  text-underline-position: under;
-}
-
 #search-bar {
-  position: absolute;
+  position: relative;
+  width: 80vw;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 10px;
+  color: #fff;
+}
+
+#search-bar::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+#time {
+  font-size: 2.8em;
+  color: #fff;
+  padding-bottom: 15%;
+}
+
+#date {
+  color: #fff;
+  font-size: 2.4em;
+}
+
+#date-time-container {
+  position: relative;
+  text-align: center;
+  padding-bottom: 25%;
+}
+
+#location-description-wrapper {
+  padding-right: 5%;
+  position: relative;
+}
+
+form {
+  padding-bottom: 15%;
+}
+
+
+@media (min-width: 768px) {
+  #main-container {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  #welcome {
+    font-size: 3.2em;
+    padding-bottom: 10%;
+  }
+  #time {
+    font-size: 3.2em;
+    padding-bottom: 5%;
+  }
+
+  #date {
+    font-size: 3.0em;
+  }
+
+  #date-time-container {
+    padding-bottom: 15%;
+  }
+
+  #weather-wrapper div {
+    font-size: 1.2em;
+    padding-bottom: 3%;
+  }
+
+  h2 {
+    font-size: 2.6em;
+  }
+
+  .app {
+    font-size: 3em;
+  }
+
+  #search-bar::placeholder {
+    font-size: 1.2em;
+  }
+  form {
+    padding-bottom: 10%;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #time-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #app-side {
+    width: 50%;
+    height: 100%;
+  }
+  #app-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 400px 20px;
+    grid-template-rows: 400px 200px;
+  }
+
+  #search-bar {
+  position: relative;
   cursor: text;
   padding: 3px 10px;
   border-radius: 5px;
-  width: 20%;
+  width: 80%;
   height: auto;
   outline: none;
   background-color: transparent;
@@ -81,125 +194,48 @@ body{
   border-bottom: 2px solid white;
   color: #fff;
 }
-
-#search-bar::placeholder {
-  color: #fff;
-}
-
-#search-bar:focus::placeholder {
-  color:transparent;
-  padding-right: 80%;
-}
-
-#welcome {
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 2%;
-}
-
-#date-time-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-#date {
-  font-size: 2em;
-  margin-bottom: 3%;
-}
-#time {
-  font-size: 2em;
-}
-
-.fab, .fas {
-  font-size: 4em;
-}
-
-#weather {
-  display: flex;
-  justify-content: space-around;
-
-  width: 10%;
-  position: relative;
-  top: 10%;
-  left: 4%;
-}
-
-@media screen and (max-width: 960px) {
-
-  body {
-    max-width: 100vw;
-    max-height: 100vh;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  #weather {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    padding-right: 6%;
-  }
-
-  #loc-des {
-    padding-right: 5%;
-  }
-
-  #welcome {
-    position: relative;
-    text-align: center;
-    margin: 5% auto 0 auto;
-  }
-
-  #main-container {
-    max-width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
-  #app-side {
-    width: 100vw;
-    height: auto;
-    margin-top: 15%;
-  }
-
-  #app-container {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  #date {
-    font-size: 1.3em;
-    margin-bottom: 3%;
-  }
-
-  #time-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-  }
-
   form {
-    width: 80vw;
-    height: 50px;
-    text-align: center;
-    margin-top: 45%;
-  }
-
-  #search-bar {
-    margin: 0 auto;
-    display: block;
-    width: 80vw;
+    margin-bottom: 15%;
+    height: auto;
+    width: 60%;
     text-align: center;
   }
-
-  .fab, .fas {
-    font-size: 2em;
+  #date-time-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #date {
+    font-size: 3.5em;
+  }
+  #time {
+    font-size: 3.5em;
+    letter-spacing: 5px;
+  }
+  #welcome {
+    font-size: 2.5em;
+  }
+  .app {
+    font-size: 4.5em;
+  }
+  #weather-wrapper {
+    padding-bottom: 0;
+    font-size: 1.2em;
+  }
+  #date-time-container {
+    position: relative;
+    padding-top: 0;
+  }
+  #location-description-wrapper {
+    font-size: 1em;
+    padding-right: 2%;
+  }
+  .app:hover {
+  color: rgba(220,220,220, .8);
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-underline-position: under;
+  }
+  .header {
+    
   }
 }

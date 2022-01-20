@@ -12,25 +12,24 @@
   <title>Start Page</title>
 </head>
 <body>
-  <h1 id="welcome"></h1>
-
-  <div id="weather">
-    <div id="loc-des">
-      <div id="location"></div>
-      <div id="description"></div>
-    </div>
-
-    <h1 id="temp"></h1>
-
-  </div>
 
   <main id="main-container">
-    <section id="time-container">
-      <section id="date-time-container">
-        <h2 id="time">00:00</h2>
-        <span id="date"></span>
-      </section>
 
+    <section id="time-container">
+      <div class="header">
+        <h1 id="welcome"> good morning </h1>
+        <div id="weather-wrapper">
+          <div id="location-description-wrapper">
+            <div id="location"> Location </div>
+            <div id="description"> Weather Description </div>
+          </div>
+          <h2 id="temp">75F</h2>
+        </div>
+      </div>
+      <section id="date-time-container">
+        <h2 id="time">12:00pm</h2>
+        <span id="date">January 2, 2021</span>
+      </section>
       <form action="https://www.duckduckgo.com/" target="_blank" autocomplete="off">
         <input type="search" name ='q' id='search-bar' placeholder="search with duckduckgo ...">
       </form>
@@ -39,20 +38,17 @@
 
 
 
-  <section id="app-side">
-      <div id="app-container">
-        <a href="https://ca.metrc.com/log-in?ReturnUrl=%2findustry%2fCDPH-10003256%2fpackages"><i class="fas fa-cannabis app"></i></a>
-        <a href="https://twitter.com/yokrozb" target="_blank"><i class="fab fa-twitter app"></i></a>
-        <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit app"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube app"></i></a>
-      </div>
+    <section id="app-side">
+        <div id="app-container">
+          <a href="https://ca.metrc.com/log-in?ReturnUrl=%2findustry%2fCDPH-10003256%2fpackages"><i class="fas fa-cannabis app"></i></a>
+          <a href="https://twitter.com/yokrozb" target="_blank"><i class="fab fa-twitter app"></i></a>
+          <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit app"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube app"></i></a>
+        </div>
 
 
-  </section>
-
+    </section>
   </main>
   <script src="main.js" charset="utf-8"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

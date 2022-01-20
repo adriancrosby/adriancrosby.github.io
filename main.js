@@ -80,7 +80,7 @@ function monthWord() {
   for (let i = 0; i < 20; i++) {
     if (parseInt(Object.keys(months)[i]) == currentMonth) {
       displayMonth = months[i + 1];
-      return date.innerText = `${displayMonth} ${day}, ${year}`;
+      return date.innerHTML = `${displayMonth} ${day}, ${year}`;
     }
   }
 }
@@ -113,16 +113,16 @@ function startTime() {
   }
 
   if (hours < 12) {
-    welcome.innerText = 'good morning, adrian.'
+    welcome.innerHTML = 'good morning, adrian.'
   }
   if (hours >= 12 && hours < 17) {
-    welcome.innerText = 'good afternoon, adrian.'
+    welcome.innerHTML = 'good afternoon, adrian.'
   }
   if (hours >= 17) {
-    welcome.innerText = 'good evening, adrian.'
+    welcome.innerHTML = 'good evening, adrian.'
   }
 
-  time.innerText = `${displayHours}:${displayMinutes}:${displaySeconds}`;
+  time.innerHTML = `${displayHours}:${displayMinutes}:${displaySeconds}`;
 }
 setInterval(startTime, 1000)
 monthWord();
