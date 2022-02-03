@@ -1,241 +1,317 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Quicksand', Arial;
-  color: #fff;
-}
 
+}
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url("bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0,0,0,.4); /* Tint color */
-  background-blend-mode: multiply;
-}
-
-#welcome {
-  text-align: center;
-  padding-bottom: 15%;
-}
-
-.header {
-  min-height: 20vh;
-  width: 100%;
-}
-#weather-wrapper {
-  position: relative;
+  max-width: 100%
   height: auto;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10%
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4rem;
+  color: #01559A;
+}
+.header {
+  height: 500px;
+  min-width: 100%;
+  background-image: url('surfskate2.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-color: black;
 }
 
-#main-container {
-  position: relative;
-  min-height: 80vh;
+.phrase {
+  font-family: 'Supermercado One', cursive;
+  font-size: 2rem;
+  z-index: 0;
+  height: 70%;
   width: 100%;
+  color: rgba(255, 255, 255, .8);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
 }
 
-#app-container {
-  position: relative;
-  width: 100vw;
+.ride-the-pipe{
+  margin-top: 24%;
+}
+
+.catch-the-wave {
+}
+
+.logo {
+  width: 100%;
   height: auto;
+}
+
+.img-container {
+  width: 40%;
+  transition: all .5s;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+
+
+
+.navbar {
+  z-index: 100;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  transition: all 0.5s;
+
+}
+
+.navbar-links {
+  width: 100%;
+  background-color: rgba(20,20,20,.8);
+  display: none;
+  transition: all .5s;
+}
+
+.navbar-links.active {
+  display: flex;
+  transition: all .5s;
+  margin-top: 5%;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar-links li {
+  list-style: none;
+  text-align: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  display: block;
+  padding: 1rem 1rem;
+}
+
+
+
+.btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  transition: all .5s;
+}
+
+.btn.click #ham::before {
+  content: '\f00d';
+}
+
+#ham {
+  color: #ffdf00;
+  font-size: 1.8rem;
+  transition: all .5s;
+}
+
+#body {
+  color: #01559A;
+  background-color: #fff;
+}
+
+#body h2 {
+  text-align: center;
+}
+
+#about-us {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about-us-heading {
+  padding-top: 10%;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.about-us-heading::before,
+.about-us-heading::after {
+  text-align: center;
+  display: inline-block;
+  content: "";
+  border-top: .3rem solid #01559A;
+  border-radius: 1px;
+  width: 4rem;
+  margin: 0 .5rem;
+  transform: translateY(-.5rem);
+}
+.weed1 {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  margin-top: 5%;
+}
+
+#products {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+#flower-info {
+  text-align: center;
+  margin-top: 10%;
+}
+
+#flower-info h4 {
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  font-size: 400;
+}
+
+#flower-info h2 {
+  padding-bottom: 2%;
+  word-break: break-all;
+}
+
+.cannabis-heading::before,
+.cannabis-heading::after {
+  text-align: center;
+  display: inline-block;
+  content: "";
+  border-top: .3rem solid #01559A;
+  border-radius: 1px;
+  width: 4rem;
+  margin: 0 .5rem;
+  transform: translateY(1rem);
+}
+
+#vape-carts {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+#vape-strains > h4 {
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  padding: 3% 0 0 0;
+}
+#vape-strains h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 2%;
+}
+
+.topz {
+  padding-top: 10%;
+}
+#products h4{
+  font-family: 'Lobster', cursive;
+  line-height: 2.5rem;
+}
+
+.bgcolor {
+  background-color: rgba(0, 0, 0, .8);
+  transition: all .5s;
+}
+
+#contact-us {
+  background-color: rgba(200,100,0,.3); /* Tint color */
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 500px;
+  background-image: url('surfskate1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact {
+  color: #ffdf00;
+  color: #fff;
+  margin-left: 2.5%;
+
+}
+
+#contact-us {
+  padding-top: 15%;
+}
+
+.contact-container {
+  width: 100%;
+}
+
+#message {
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  height: 100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.name-email-container {
   display: flex;
   justify-content: space-around;
-}
-
-.app {
-  font-size: 2.5em;
-  color: #fff;
-}
-#search-bar {
-  position: relative;
-  width: 80vw;
-  background-color: transparent;
+  width: 100%;
+  margin: 5% auto;
   outline: none;
+}
+
+#submit-btn {
+  background-color: #01559A;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffdf00;
+  letter-spacing: 2px;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin: 0 auto;
   border: none;
-  border-bottom: 1px solid white;
-  border-radius: 10px;
-  color: #fff;
-}
-
-#search-bar::placeholder {
-  color: #fff;
-  text-align: center;
-}
-
-#time {
-  font-size: 2.8em;
-  color: #fff;
-  padding-bottom: 15%;
-}
-
-#date {
-  color: #fff;
-  font-size: 2.4em;
-}
-
-#date-time-container {
-  position: relative;
-  text-align: center;
-  padding-bottom: 25%;
-}
-
-#location-description-wrapper {
-  padding-right: 5%;
-  position: relative;
+  margin-left: 2.5%;
+  margin-top: 5%;
 }
 
 form {
-  padding-bottom: 15%;
-}
-
-
-@media (min-width: 768px) {
-  #main-container {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  #welcome {
-    font-size: 3.2em;
-    padding-bottom: 10%;
-  }
-  #time {
-    font-size: 3.2em;
-    padding-bottom: 5%;
-  }
-
-  #date {
-    font-size: 3.0em;
-  }
-
-  #date-time-container {
-    padding-bottom: 15%;
-  }
-
-  #weather-wrapper div {
-    font-size: 1.2em;
-    padding-bottom: 3%;
-  }
-
-  h2 {
-    font-size: 2.6em;
-  }
-
-  .app {
-    font-size: 3em;
-  }
-
-  #search-bar::placeholder {
-    font-size: 1.2em;
-  }
-  form {
-    padding-bottom: 10%;
-  }
-}
-
-@media (min-width: 1025px) {
-  body {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  #main-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  #time-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #app-side {
-    width: 50%;
-    height: 100%;
-  }
-  #app-container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 400px 20px;
-    grid-template-rows: 400px 200px;
-  }
-
-  #search-bar {
-  position: relative;
-  cursor: text;
-  padding: 3px 10px;
-  border-radius: 5px;
-  width: 80%;
-  height: auto;
   outline: none;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid white;
-  color: #fff;
+  display: block;
+  margin: 0 auto;
 }
-  form {
-    margin-bottom: 15%;
-    height: auto;
-    width: 60%;
-    text-align: center;
-  }
-  #date-time-container {
-    display: flex;
-    flex-direction: column;
-  }
-  #date {
-    font-size: 3.5em;
-  }
-  #time {
-    font-size: 3.5em;
-    letter-spacing: 5px;
-  }
-  #welcome {
-    font-size: 2.5em;
-  }
-  .app {
-    font-size: 4.5em;
-  }
-  #weather-wrapper {
-    padding-bottom: 0;
-    font-size: 1.2em;
-  }
-  #date-time-container {
-    position: relative;
-    padding-top: 0;
-  }
-  #location-description-wrapper {
-    font-size: 1em;
-    padding-right: 2%;
-  }
-  .app:hover {
-  color: rgba(220,220,220, .8);
-  text-decoration: underline;
-  text-decoration-thickness: .1em;
-  text-underline-position: under;
-  }
-  .header {
 
-  }
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.8rem;
+  background-color: black;
+  color: #ffdf00;
+  text-align: center;
+}
+
+#icon {
+  width: 20%;
+}
+.privacy-policy {
+  margin-bottom: 5%;
+}
+
+.privacy-policy  a {
+  color: #ffdf00;
+  text-decoration: none;
 }

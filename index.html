@@ -4,51 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/8b936d0789.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;700&family=Supermercado+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Start Page</title>
+  <title>Document</title>
 </head>
 <body>
-
-  <main id="main-container">
-
-    <section id="time-container">
-      <div class="header">
-        <h1 id="welcome"> good morning </h1>
-        <div id="weather-wrapper">
-          <div id="location-description-wrapper">
-            <div id="location"> Location </div>
-            <div id="description"> Weather Description </div>
-          </div>
-          <h2 id="temp">75F</h2>
+  <header class="header">
+    <nav class="navbar">
+        <span class="img-container"><img class='logo' src="logo.png" alt=""></span>
+        <a href="javascript:void(0)" class='btn'><i class="fas fa-bars" id ="ham"></i></a>
+        <div class="navbar-links">
+          <ul class='nav-list'>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
         </div>
+    </nav>
+
+
+
+    <section class="phrase">
+      <h2 class="ride-the-pipe">Ride The Pipe </h2>
+      <h2 class="catch-the-wave">Catch The Wave</h2>
+    </section>
+  </header>
+
+  <section id="body">
+    <article id="about-us">
+      <h2 class="about-us-heading"><span>ABOUT US</span></h2>
+      <br>
+      <p>Halfpipe Cannabis is the easy-on-the-wallet flower brand designed to match your California lifestyle. We handpick the best genetics to thrive in our native coastal region to deliver the highest quality buds. Every flower is meticulously cared for by our devoted team and grown in a state-of-the-art greenhouse located on the sunny coast of California for a consistency you can count on.
+      <br>
+      <br>
+      Our manufacturing process consists of premium biomass extracted with cryogenically chilled ethanol to provide the cleanest product from start to finish. After extraction, we complete a triple distillation to ensure our customers receive the highest quality, consistent, and potent product – a final oil with a high THC concentrate that provides the full flavor of the terpenes and oil.
+      <br>
+      <br>
+      Whether you skate, surf, or just smoke, find your balance with Halfpipe.</p>
+    </article>
+
+    <img src="weed1.jpg" alt="" class="weed1">
+
+  </section>
+
+<!-- Flower Section -->
+  <section id="flower-info">
+    <h2 class='cannabis-heading'>CANNABIS</h2>
+    <h2>FLOWER</h2>
+    <section id="products">
+      <h4>Horchata</h4>
+      <p>Just as delicious as the drink it's named after, Horchata will have you begging for more after just one taste. This bud has a sweet and fruity berry flavor with a creamy overtone that has a hint of light spices. Horchata is ideal for treating the experienced patient suffering from chronic pain, depression, chronic stress or anxiety and PTSD. </p>
+
+      <h4>Marshmallow</h4>
+      <p>Like its name suggests, Marshmallow has a super sweet candy flavor accented by nutty honey and a touch of fruitiness. The aroma is just as sweet, with a slightly pungent roasted marshmallow overtone. Marshmallow is perfect to treat insomnia, appetite loss, chronic pain, muscle spasms, and nausea.  </p>
+
+      <h4>Wakanda OG</h4>
+      <p>An evenly balanced hybrid created by crossing the classic Cookies x OG Kush x GG4 strains.  This bud has a spicy yet sweet skunky flavor with a  peppery and pungent floral aroma to match. Wakanda OG is often chosen to treat those suffering from conditions such as chronic pain, depression or mood swings, chronic stress, insomnia and nausea or appetite loss. </p>
+
+
+    </section>
+    <img src="weed11.jpg" alt="" class="weed1">
+  </section>
+
+  <!-- Vape Cart Section -->
+  <section id="vape-carts">
+    <section id="vape-strains">
+      <h2 class="cannabis-heading topz">Cannabis</h2>
+      <h2>Vapes</h2>
+      <h4>Asian Pear</h4>
+      <p>A candy flavor that keeps you wanting more. Not too much, not too bland, but just right. Enjoy the subtle notes of summer on the fly.</p>
+      <h4>Blue Razz</h4>
+      <p>It’s sweet, it’s sour, it’s delicious. This classic keeps the party going.</p>
+      <h4>Blueberry Cheesecake</h4>
+      <p>One of our team’s favorite smelling terps. Throw in the silky berry taste and you’re hooked.</p>
+      <h4>Cookies N Cream</h4>
+      <p>We’re taking you back to your grandmas’ kitchen. Enjoy the taste of those cookies just how you remembered them.</p>
+      <h4>Lemon Slushie</h4>
+      <p>Ideal for mental focus and a needed pick me up. With flavors and scents of freshly squeezed lemonade this is what you wake and bakers are looking for.</p>
+    </section>
+    <img src="halfpipe-vapes.jpg" id="vape-img" alt="">
+  </section>
+
+  <!-- photo lineup -->
+  <!-- <div class="container">
+      <div class="slide"><img src="weed1.jpg" alt="" class='img-scroll'></div>
+      <div class="slide"><img src="weed2.jpg" alt="" class='img-scroll'></div>
+      <div class="slide"><img src="weed3.jpg" alt="" class='img-scroll'></div>
+      <div class="slide"><img src="weed4.jpg" alt="" class='img-scroll'></div>
+    </div>
+  </div> -->
+
+
+  <section id="contact-us">
+    <h3 class="contact cheading">CONTACT US</h3>
+    <p class = "contact cparagraph">Got questions? Drop us a line.</p>
+    <form class="contact-container">
+      <div class="name-email-container">
+        <input id="name" class="contactinfo" placeholder="Name"type="text" name ="nameField">
+        <input id="email" class="contactinfo" placeholder="Email Address"type="text" name = "emailField">
       </div>
-      <section id="date-time-container">
-        <h2 id="time">12:00pm</h2>
-        <span id="date">January 2, 2021</span>
-      </section>
-      <form action="https://www.duckduckgo.com/" target="_blank" autocomplete="off">
-        <input type="search" name ='q' id='search-bar' placeholder="search with duckduckgo ...">
-      </form>
-    </section>
+      <textarea name="message" placeholder="message" id="message"></textarea>
+      <button id="submit-btn">Submit</button>
+    </form>
+    <!-- <div id="status">Success</div> -->
+  </section>
 
+  <footer>
+    <div class="icon"><img id ="icon"src="icon.jpg" alt=""></div>
+    <span>&copy; 2022 Halfpipe Cannabis. All Rights Reserved. </span>
+    <br>
+    <br>
+    <span class="privacy-policy"><a href="#">Privacy Policy</a> <span>|</span> <a href="#">Terms & Conditions</a></span>
 
+  </footer>
 
-
-    <section id="app-side">
-        <div id="app-container">
-          <a href="https://ca.metrc.com/log-in?ReturnUrl=%2findustry%2fCDPH-10003256%2fpackages"><i class="fas fa-cannabis app"></i></a>
-          <a href="https://twitter.com/yokrozb" target="_blank"><i class="fab fa-twitter app"></i></a>
-          <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit app"></i></a>
-          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube app"></i></a>
-        </div>
-
-
-    </section>
-  </main>
   <script src="main.js" charset="utf-8"></script>
 </body>
 </html>
