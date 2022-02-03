@@ -14,7 +14,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navbar.classList.add('bgcolor');
     logo.style.width = '30%';
-    navbar.style.height = "7.8%"
+    navbar.style.height = "10%"
     ham.style.fontSize = "1.5rem"
     btn.style.top = "1.7rem"
     logo.style.marginTop = "1.5rem"
